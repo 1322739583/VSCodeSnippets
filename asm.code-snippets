@@ -24,11 +24,12 @@
 		"body": [
 			"assume cs:code",
 			"code segment\n",
+			"start:",
 			"\t$1",
 			"\n\tmov ax,4c00h",
 			"\tint 21h",
 			"code ends",
-			"end"
+			"end start"
 		],
 		"description": "basic section"
 	},
@@ -40,12 +41,13 @@
 			"data segment",
 			"\t$1",
 			"data ends",
-			"code segment\n",
+			"code segment",
+			"start:",
 			"\t$2",
 			"\n\tmov ax,4c00h",
 			"\tint 21h",
 			"code ends",
-			"end"
+			"end start"
 		],
 		"description": "complete section"
 	},
@@ -53,7 +55,7 @@
 		"scope": "assembly",
 		"prefix": "dw123",
 		"body": [
-			 "dw 0123h,0456h,0789h,0abch,0deffh,0fedh,0cbah,0987h"
+			"dw 0123h,0456h,0789h,0abch,0deffh,0fedh,0cbah,0987h"
 		],
 		"description": "dw 123"
 	},
@@ -61,32 +63,33 @@
 		"scope": "assembly",
 		"prefix": "dw8zero",
 		"body": [
-			 "dw 0,0,0,0,0,0,0,0"
+			"dw 0,0,0,0,0,0,0,0"
 		],
 		"description": "dw 8 zero"
 	},
 	"dw16zero": {
 		"scope": "assembly",
-		"prefix": "dw8zero",
+		"prefix": "dw16zero",
 		"body": [
-			 "dw 0,0,0,0,0,0,0,0",
-			 "dw 0,0,0,0,0,0,0,0"
+			"dw 0,0,0,0,0,0,0,0",
+			"dw 0,0,0,0,0,0,0,0"
 		],
 		"description": "dw 16 zero"
 	},
 	"dw1to8": {
 		"scope": "assembly",
-		"prefix": "dw8zero",
+		"prefix": "dw1to8",
 		"body": [
-			 "dw 1,2,3,4,5,6,7,8"
+			"dw 1,2,3,4,5,6,7,8"
 		],
 		"description": "dw 1 to 8"
-	},	"dw1to16": {
+	},
+	"dw1to16": {
 		"scope": "assembly",
-		"prefix": "dw8zero",
+		"prefix": "dw1to16",
 		"body": [
-			 "dw 1,2,3,4,5,6,7,8",
-			 "dw 9,a,b,c,d,e,f,g"
+			"dw 0,1,2,3,4,5,6,7",
+			"dw 8,9,0ah,0bh,0ch,0dh,0eh,0fh"
 		],
 		"description": "dw 1 to 16"
 	},
