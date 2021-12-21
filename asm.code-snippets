@@ -71,8 +71,33 @@
 		"body": [
 			 "dw 0,0,0,0,0,0,0,0",
 			 "dw 0,0,0,0,0,0,0,0"
-
 		],
 		"description": "dw 16 zero"
+	},
+	"dw1to8": {
+		"scope": "assembly",
+		"prefix": "dw8zero",
+		"body": [
+			 "dw 1,2,3,4,5,6,7,8"
+		],
+		"description": "dw 1 to 8"
+	},	"dw1to16": {
+		"scope": "assembly",
+		"prefix": "dw8zero",
+		"body": [
+			 "dw 1,2,3,4,5,6,7,8",
+			 "dw 9,a,b,c,d,e,f,g"
+		],
+		"description": "dw 1 to 16"
+	},
+	"s": {
+		"scope": "assembly",
+		"prefix": "s",
+		"body": [
+			"$1 segment",
+			"\t$0",
+			"$1 ends"
+		],
+		"description": "define segment"
 	}
 }
